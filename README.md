@@ -1,6 +1,6 @@
 # MyFlix
 
-Aplicação em Next.js de cat�logo de filmes, onde é possível realizar login com GitHub e adicionar itens aos seus favoritos. Utiliza a API do [TMDB](https://www.themoviedb.org) para consumir os dados, e para gerenciar os filmes preferidos o SQLite e Prisma.
+Aplicação em Next.js de catálogo de filmes, onde é possível realizar login com GitHub e adicionar itens aos seus favoritos. Utiliza a API do [TMDB](https://www.themoviedb.org) para consumir os dados, e para gerenciar os filmes preferidos o SQLite e Prisma.
 
 ## ✨ Preview
 
