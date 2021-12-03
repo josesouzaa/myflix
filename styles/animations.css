@@ -1,0 +1,27 @@
+.showFromTop {
+  animation: showFromTop 0.3s forwards;
+}
+
+.showFromTransparency {
+  animation: showFromTransparency 0.3s forwards;
+}
+
+@keyframes showFromTop {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showFromTransparency {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
