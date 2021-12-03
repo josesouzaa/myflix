@@ -33,22 +33,26 @@ export default NextAuth({
         return session
       }
     },
-    async signIn({ user }) {
-      const { name, email, image } = user
+    async signIn({ profile }) {
+      const { id, login, name, email, html_url, avatar_url, bio } = profile
 
       try {
         const userExists = await prisma.user.findFirst({
           where: {
-            email: user.email
+            id: id
           }
         })
 
         if (!userExists) {
           await prisma.user.create({
             data: {
+              id: id,
+              login: login,
               name: name,
               email: email,
-              avatar: image
+              html_url: html_url,
+              avatar_url: avatar_url,
+              bio: bio
             }
           })
         }
@@ -56,6 +60,10 @@ export default NextAuth({
       } catch {
         return false
       }
+    },
+    redirect({ url, baseUrl }) {
+      if (url.includes('user')) return baseUrl
+      return url
     }
   }
 })

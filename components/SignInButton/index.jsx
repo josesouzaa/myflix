@@ -7,7 +7,7 @@ export default function SignInButton() {
 
   return session ? (
     <div className="flex items-center gap-2 bg-red-600 px-4 py-2 rounded-full hover:brightness-90 transition-all font-semibold">
-      <Link href="/user/1">
+      <Link href={`/user/${session.uuid}`}>
         <a>Porfile</a>
       </Link>
       <button type="button" onClick={() => signOut()}>

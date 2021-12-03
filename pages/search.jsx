@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import SearchForm from '../components/SearchForm'
+import FavoriteButton from '../components/FavoriteButton'
 
 export default function Busca() {
   const [searchText, setSearchText] = useState('')
@@ -42,7 +43,11 @@ export default function Busca() {
                 </a>
                 <div className="py-4 px-4 sm:px-4 sm:pl-0 md:px-4 flex flex-col gap-2">
                   <h2 className="text-left text-3xl font-bold">
-                    {movie.title}
+                    {movie.title}{' '}
+                    <FavoriteButton
+                      movie={movie}
+                      isFavorite={movie.isFavorite}
+                    />
                   </h2>
                   <small className="text-gray-400">{movie.release_date}</small>
                   <span

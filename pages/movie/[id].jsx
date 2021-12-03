@@ -10,9 +10,9 @@ export default function Movie({ movie }) {
       </Head>
 
       <main className="max-w-screen-lg mx-auto py-5">
-        <div className="grid grid-cols-1 gap-4 mx-4 lg:mx-0 p-4 bg-black md:grid-cols-2 rounded">
+        <div className="grid grid-cols-1 gap-4 mx-4 lg:mx-0 p-4 bg-black md:grid-cols-2 rounded-sm">
           <img
-            className="rounded"
+            className="rounded-sm"
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             alt={movie.title}
           />
@@ -55,7 +55,14 @@ export default function Movie({ movie }) {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
+}
+
+export async function getStaticProps(context) {
   const id = context.params.id
 
   const response = await api.post(`/movie/${id}`)

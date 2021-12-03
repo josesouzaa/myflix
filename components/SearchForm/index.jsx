@@ -1,3 +1,4 @@
+import { useSession } from 'next-auth/react'
 import { api } from '../../services/api'
 
 export default function SearchForm({
@@ -5,10 +6,14 @@ export default function SearchForm({
   setSearchText,
   setMoviesList
 }) {
+  const { data: session } = useSession()
+
   async function handleSubmit(e) {
     e.preventDefault()
     if (searchText !== '') {
-      const response = await api.get(`/search?movie=${searchText}`)
+      const response = await api.get(
+        `/search?movie=${searchText}&user=${session.uuid}`
+      )
       const movies = response.data
       setMoviesList(movies)
     }
