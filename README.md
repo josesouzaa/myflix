@@ -1,29 +1,27 @@
-# Next.js + Tailwind CSS Example
+# MyFlix
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Aplicação em Next.js de cat�logo de filmes, onde é possível realizar login com GitHub e adicionar itens aos seus favoritos. Utiliza a API do [TMDB](https://www.themoviedb.org) para consumir os dados, e para gerenciar os filmes preferidos o SQLite e Prisma.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+## ✨ Preview
 
-## Preview
+<img src="./preview.gif">
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+## 🛠 Builded with
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)
+![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)
+![Tailwind](https://img.shields.io/badge/-Tailwind-05122A?style=flat&logo=TailwindCSS)
+![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
+![NextJS](https://img.shields.io/badge/-Next.js-05122A?style=flat&logo=Next.js)
+![Prisma](https://img.shields.io/badge/-Prisma-05122A?style=flat&logo=Prisma)
+![SQLite](https://img.shields.io/badge/-SQLite-05122A?style=flat&logo=SQLite)
 
-## Deploy your own
+## <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="25px"> About me
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- 👤 Bacharel em jornalismo se aventurando pelo mundo da programação, estudando stacks relacionadas ao front-end, focado em ReactJS
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- 🔭 Me encontre: <a href="https://josesouzaa.github.io" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/Portf%C3%B3lio-Jos%C3%A9%20de%20Souza-05122A?style=flat" alt="Portfólio"/>
+  </a> <a href="https://www.linkedin.com/in/jose-de-souza/" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/-José_de_Souza-05122A?style=flat&logo=linkedin" alt="linkedin"/>
+  </a>

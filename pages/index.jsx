@@ -9,7 +9,7 @@ export default function Home({ movies }) {
         <title>MyFlix | Home</title>
       </Head>
 
-      <main className="max-w-screen-lg mx-auto">
+      <main className="max-w-screen-lg mx-auto pb-8">
         <h1 className="text-center text-5xl font-bold mb-10">
           Trending of the week
         </h1>
