@@ -18,29 +18,31 @@ export default async (req, res) => {
     }
   })
 
-  if (!movieIsFavorite && isAuthenticated) {
-    const addFavorite = await prisma.favorite.create({
-      data: {
-        id: movie.id,
-        title: movie.title,
-        release_date: movie.release_date,
-        vote_average: movie.vote_average,
-        poster_path: movie.poster_path,
-        overview: movie.overview,
-        userUuid: user
-      }
-    })
-    res.status(200).json(addFavorite)
-  }
+  try {
+    if (!movieIsFavorite && isAuthenticated) {
+      const addFavorite = await prisma.favorite.create({
+        data: {
+          id: movie.id,
+          title: movie.title,
+          release_date: movie.release_date,
+          vote_average: movie.vote_average,
+          poster_path: movie.poster_path,
+          overview: movie.overview,
+          userUuid: user
+        }
+      })
+      res.status(200).json(addFavorite)
+    }
 
-  if (movieIsFavorite && isAuthenticated) {
-    const removeFavorite = await prisma.favorite.delete({
-      where: {
-        uuid: movieIsFavorite.uuid
-      }
-    })
-    res.status(200).json(removeFavorite)
+    if (movieIsFavorite && isAuthenticated) {
+      const removeFavorite = await prisma.favorite.delete({
+        where: {
+          uuid: movieIsFavorite.uuid
+        }
+      })
+      res.status(200).json(removeFavorite)
+    }
+  } catch {
+    res.status(200)
   }
-
-  res.status(200)
 }

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { useState } from 'react'
 import SearchForm from '../components/SearchForm'
 import FavoriteButton from '../components/FavoriteButton'
@@ -31,16 +32,15 @@ export default function Busca() {
                 key={movie.id}
                 className="flex flex-col sm:flex-row md:flex-col rounded bg-black shadow-md"
               >
-                <a
-                  className="cursor-pointer sm:w-2/5 md:w-auto p-4 sm:flex-shrink-0 md:flex-shrink hover:brightness-75 transition-all"
-                  href={`/movie/${movie.id}`}
-                >
-                  <img
-                    className="rounded"
-                    src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                    alt={movie.title}
-                  />
-                </a>
+                <Link href={`/movie/${movie.id}`}>
+                  <a className="cursor-pointer sm:w-2/5 md:w-auto p-4 sm:flex-shrink-0 md:flex-shrink hover:brightness-75 transition-all">
+                    <img
+                      className="rounded"
+                      src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                      alt={movie.title}
+                    />
+                  </a>
+                </Link>
                 <div className="py-4 px-4 sm:px-4 sm:pl-0 md:px-4 flex flex-col gap-2">
                   <h2 className="text-left text-3xl font-bold">
                     {movie.title}{' '}

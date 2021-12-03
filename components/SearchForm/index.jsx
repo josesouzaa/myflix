@@ -12,7 +12,7 @@ export default function SearchForm({
     e.preventDefault()
     if (searchText !== '') {
       const response = await api.get(
-        `/search?movie=${searchText}&user=${session.uuid}`
+        `/search?movie=${searchText}&user=${session?.uuid}`
       )
       const movies = response.data
       setMoviesList(movies)
