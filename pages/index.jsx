@@ -40,6 +40,12 @@ export default function Home({ movies }) {
   )
 }
 
+export async function getStaticPaths() {
+  return {
+    fallback: 'blocking'
+  }
+}
+
 export async function getStaticProps() {
   const response = await api.get(`/trending`)
   const movies = response.data
