@@ -40,20 +40,13 @@ export default function Home({ movies }) {
   )
 }
 
-export async function getStaticPaths() {
-  return {
-    fallback: 'blocking'
-  }
-}
-
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await api.get(`/trending`)
   const movies = response.data
 
   return {
     props: {
       movies
-    },
-    revalidate: 60
+    }
   }
 }
