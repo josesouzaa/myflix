@@ -8,7 +8,8 @@ export default async (req, res) => {
 
   const movieIsFavorite = await prisma.favorite.findFirst({
     where: {
-      id: Number(id)
+      id: Number(id),
+      userUuid: user
     }
   })
 
