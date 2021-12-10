@@ -65,7 +65,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const id = context.params.id
 
-  const response = await api.post(`/movie/${id}`)
+  const response = await api.get(`/movie/${id}`)
   const movie = response.data
 
   return {

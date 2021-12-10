@@ -5,5 +5,5 @@ export const tmdb = axios.create({
 })
 
 export const api = axios.create({
-  baseURL: process.env.URL_APLICATION
+  baseURL: 'https://myflixapp.vercel.app/api'
 })

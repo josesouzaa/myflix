@@ -5,6 +5,7 @@ export default async (req, res) => {
   const prisma = new PrismaClient()
 
   const { movie, user } = req.query
+
   const response = await tmdb.get(
     `/search/movie?api_key=${process.env.API_KEY}&query=${movie}`
   )
@@ -30,10 +31,11 @@ export default async (req, res) => {
           return { ...movie, isFavorite: false }
         }
       })
-
       res.status(200).json(filtredMovies)
+    } else {
+      res.status(200).json(movies)
     }
   } catch {
-    res.status(200).json(movies)
+    res.status(400).send({ message: 'Cannot Get' })
   }
 }
